@@ -76,7 +76,7 @@
 #     category = "Obesity"
 
 
-# print(f"Your BMI is:",bmi)
-# print(f"Your BMI category is:",category)
+# print("Your BMI is:",bmi)
+# print("Your BMI category is:",category)
 
 
