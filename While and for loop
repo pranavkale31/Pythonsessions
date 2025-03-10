@@ -1,0 +1,102 @@
+#2 table
+# number = 2  
+# i = 1    
+
+# while i <= 10:  
+#     print(f"{number} x {i} = {number * i}")
+#     i += 1  
+
+#Write a program to generate numbers from 1 to 10
+# i=1
+
+# while i <= 10:
+#     print(i)
+#     i += 1
+
+#Write a program to generate only even numbers from 1 - 100
+
+# i = 1
+
+# while i <= 100:
+#     if i % 2 == 0:
+#         print(i)
+
+#     i += 1
+
+
+# Write a program to generate only odd numbers from 1 - 100 (Combination of While Loop  and If Condition) 
+# i = 1
+
+# while i <= 100:
+#     if i % 2 == 1:
+#         print(i)
+
+#     i += 1
+
+# Generate two lists, it one should hold even numbers and other should hold odd numbers from 1-50
+
+# even_numbers = []  
+# odd_numbers = []  
+
+# # Loop from 1 to 50
+# for num in range(1, 51):  
+#     if num % 2 == 0:  
+#         even_numbers.append(num)
+#     else:  
+#         odd_numbers.append(num)
+
+# print("Even Numbers:", even_numbers)
+# print("Odd Numbers:", odd_numbers)
+
+# Given a list of daily stock prices, write a program to calculate the average stock price
+
+# def average_stock_price(prices):
+  
+#     if not prices:  
+#         return "No prices provided."
+
+#     avg_price = sum(prices) / len(prices)  
+#     return round(avg_price, 2)  
+
+
+# stock_prices = [100, 102, 98, 105, 110, 108]  
+# print("Average Stock Price:", average_stock_price(stock_prices))
+
+# Function that returns the sum of digits of a number, passed to it as an argument. Eg. 520 should return 7
+# def sum_of_digits(num):
+
+#     return sum(int(digit) for digit in str(num))  
+
+
+# number = 520
+# print("Sum of digits:", sum_of_digits(number))
+
+
+# Given a list of past monthly sales, calculate the average sales to predict next month’s demand
+
+# def predict_next_month_sales(sales):
+ 
+#     if not sales: 
+#         return "No sales data provided."
+
+#     avg_sales = sum(sales) / len(sales)  
+#     return round(avg_sales, 2)  
+
+# past_sales = [1500, 1600, 1700, 1650, 1550, 1800] 
+# predicted_sales = predict_next_month_sales(past_sales)
+# print("Predicted Sales for Next Month:", predicted_sales)
+
+
+# Find Companies Listed in Either NYSE or NASDAQ but Not Both. (Finance)
+
+# nyse_companies = {"Apple", "Microsoft", "IBM", "Tesla", "Goldman Sachs"} 
+# nasdaq_companies = {"Tesla", "Amazon", "Google", "Microsoft", "Meta"}
+
+nyse_companies = {"Apple", "Microsoft", "IBM", "Tesla", "Goldman Sachs"}
+nasdaq_companies = {"Tesla", "Amazon", "Google", "Microsoft", "Meta"}
+
+
+exclusive_companies = nyse_companies ^ nasdaq_companies  
+
+
+print("Companies listed in either NYSE or NASDAQ but not both:", exclusive_companies)
