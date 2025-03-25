@@ -10,7 +10,7 @@
 # i=1
 
 # while i <= 10:
-#     print(i)
+#     print(i)  
 #     i += 1
 
 #Write a program to generate only even numbers from 1 - 100
@@ -92,11 +92,153 @@
 # nyse_companies = {"Apple", "Microsoft", "IBM", "Tesla", "Goldman Sachs"} 
 # nasdaq_companies = {"Tesla", "Amazon", "Google", "Microsoft", "Meta"}
 
-nyse_companies = {"Apple", "Microsoft", "IBM", "Tesla", "Goldman Sachs"}
-nasdaq_companies = {"Tesla", "Amazon", "Google", "Microsoft", "Meta"}
+# nyse_companies = {"Apple", "Microsoft", "IBM", "Tesla", "Goldman Sachs"}
+# nasdaq_companies = {"Tesla", "Amazon", "Google", "Microsoft", "Meta"}
 
 
-exclusive_companies = nyse_companies ^ nasdaq_companies  
+# exclusive_companies = nyse_companies ^ nasdaq_companies  
 
 
-print("Companies listed in either NYSE or NASDAQ but not both:", exclusive_companies)
+# print("Companies listed in either NYSE or NASDAQ but not both:", exclusive_companies)
+
+
+#Let there be two lists
+
+#list_1 = [1,2,3,4,5,6,7,8]
+#list_2 = [9,10,11,12,13,14,15,16]
+	
+#Write a Program to return an other list which contains elements at even indexes from list_1 and elements at odd indexes from list_2
+
+# def combine_lists(list_1, list_2):
+  
+#     even_index_elements = [list_1[i] for i in range(len(list_1)) if i % 2 == 0]
+    
+
+#     odd_index_elements = [list_2[i] for i in range(len(list_2)) if i % 2 != 0]
+    
+
+#     result_list = even_index_elements + odd_index_elements
+#     return result_list
+
+# list_1 = [1, 2, 3, 4, 5, 6, 7, 8]
+# list_2 = [9, 10, 11, 12, 13, 14, 15, 16]
+
+# combined_list = combine_lists(list_1, list_2)
+# print("Combined list:", combined_list)
+
+#Implement a function to calculate the return on investment (ROI) given an initial and final list of stock prices
+# def calculate_roi(initial_prices, final_prices):
+ 
+#     try:
+       
+#         if len(initial_prices) != len(final_prices):
+#             raise ValueError()
+        
+      
+#         roi_list = []
+#         for initial, final in zip(initial_prices, final_prices):
+#             if initial <= 0:
+#                 raise ValueError()
+#             roi = ((final - initial) / initial) * 100
+#             roi_list.append(roi)
+        
+#         return roi_list
+
+#     except ValueError as ve:
+#         return f"Error: {ve}"
+#     except Exception as e:
+#         return f"An unexpected error occurred: {e}"
+
+
+# initial_prices = [100, 200, 150, 250]  
+# final_prices = [110, 220, 160, 270]    
+
+# roi_result = calculate_roi(initial_prices, final_prices)
+# print("Return on Investment (ROI) for each stock:", roi_result)
+
+#Write a program that takes a sentence as input from the user and computes the frequency of each letter. Use a dictionary to maintain the count.
+
+# sentence = input("Enter a sentence: ")
+
+
+# letter_count = {}
+
+
+# for char in sentence:
+   
+#     if char.isalpha():
+#         char = char.lower()  
+#         if char in letter_count:
+#             letter_count[char] += 1
+#         else:
+#             letter_count[char] = 1
+
+
+# print("Letter Frequency:")
+# for letter, count in letter_count.items():
+#     print(f"{letter}: {count}")
+
+# Write a short Python function that takes a positive integer n and returns the sum of the squares of all the even positive integers smaller than n.
+
+# def sum_of_even_squares(n):
+#     return sum(i**2 for i in range(2, n, 2))
+
+# n = int(input("Enter a positive integer: "))
+# result = sum_of_even_squares(n)
+# print(f"Sum of squares of even integers less than {n} is {result}")
+
+# Write a  function that takes a list as a parameter and returns True if there are duplicate elements in the list 
+# Eg:  [ 1, 2, 3, 4, 4, 5 ] this input should produce True, on the other hand [ 1, 2, 3, 4, 5 ] should produce False. 
+
+# def has_duplicates(lst):
+   
+#     return len(lst) != len(set(lst))
+
+
+# list1 = [1, 2, 3, 4, 4, 5]
+# list2 = [1, 2, 3, 4, 5]
+
+# print(has_duplicates(list1)) 
+# print(has_duplicates(list2))  
+
+#  Write a Short Python Function that takes a sequence of integer values and determines if there is a distinct pair of consecutive numbers in the sequence whose product is even
+# def has_even_product_pair(seq):
+#     for i in range(len(seq) - 1):
+#         if (seq[i] * seq[i + 1]) % 2 == 0:
+#             return True
+#     return False
+
+# seq1 = [1, 3, 5, 4, 7]
+# seq2 = [1, 3, 5, 7]
+
+# print(has_even_product_pair(seq1))
+# print(has_even_product_pair(seq2)) 
+
+# Write a short Python function, minmax(data), that takes a list of three or more numbers, and returns the smallest and largest numbers.
+# def minmax(data):
+#     return min(data), max(data)
+
+# data = [4, 7, 1, 9, 3]
+# smallest, largest = minmax(data)
+# print(f"Smallest: {smallest}, Largest: {largest}")
+
+# Write a short Python program that takes two lists a and b of length n storing int values, and returns the dot product of a and b. 
+# That is returns an list c of length n such that c[i] = a[i].b[i] for  i = 0, .. n-1
+# Eg:
+
+# Input
+# a = [2, 3, 4, 6, 7]
+# b = [3, 4, 2, 3, 1]
+
+# Output
+
+# c = [6, 12, 8, 18, 7]
+# def dot_product(a, b):
+#     c = [a[i] * b[i] for i in range(len(a))]
+#     return c
+
+# a = [2, 3, 4, 6, 7]
+# b = [3, 4, 2, 3, 1]
+
+# c = dot_product(a, b)
+# print(f"c = {c}")
